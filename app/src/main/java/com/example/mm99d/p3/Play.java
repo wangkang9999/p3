@@ -1,5 +1,6 @@
 package com.example.mm99d.p3;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -308,11 +309,10 @@ public class Play extends Activity {
                 }
                 t4=new Table(input);
                 if (!t4.checkfinish()) {
-                    Toast toast;
-                    toast = Toast.makeText(getApplicationContext(),
-                            "你还没有完成！", Toast.LENGTH_LONG);
-                    toast.setGravity(Gravity.CENTER, 0, 0);
-                    toast.show();
+                    Toast.makeText(Play.this, "还没有完成！", Toast.LENGTH_SHORT).show();
+
+
+
                 }else if (t4.checksubmit()){
                     d1=new AlertDialog.Builder(Play.this).setTitle("Congratulations").setMessage("恭喜!你解开了本谜题.").setPositiveButton("OK",null).show();
                 }else{
@@ -349,12 +349,15 @@ public class Play extends Activity {
 
         n2= (Button) findViewById(R.id.button14);
         n2.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("ResourceAsColor")
             @Override
             public void onClick(View view) {
                 for (int i=0;i<9;i++) {
                     for (int j = 0; j < 9; j++) {
                         if (mx.get(i).get(j).isFocused()){
+                            mx.get(i).get(j).setTextColor(0xff0088cc);
                             mx.get(i).get(j).setText("2");
+
                         }
                     }
                 }
@@ -369,6 +372,7 @@ public class Play extends Activity {
                     for (int j = 0; j < 9; j++) {
                         if (mx.get(i).get(j).isFocused()){
                             mx.get(i).get(j).setText("1");
+                            mx.get(i).get(j).setTextColor(0xff0088cc);
                         }
                     }
                 }
@@ -382,6 +386,7 @@ public class Play extends Activity {
                     for (int j = 0; j < 9; j++) {
                         if (mx.get(i).get(j).isFocused()){
                             mx.get(i).get(j).setText("3");
+                            mx.get(i).get(j).setTextColor(0xff0088cc);
                         }
                     }
                 }
@@ -395,6 +400,7 @@ public class Play extends Activity {
                     for (int j = 0; j < 9; j++) {
                         if (mx.get(i).get(j).isFocused()){
                             mx.get(i).get(j).setText("5");
+                            mx.get(i).get(j).setTextColor(0xff0088cc);
                         }
                     }
                 }
@@ -408,6 +414,7 @@ public class Play extends Activity {
                     for (int j = 0; j < 9; j++) {
                         if (mx.get(i).get(j).isFocused()){
                             mx.get(i).get(j).setText("4");
+                            mx.get(i).get(j).setTextColor(0xff0088cc);
                         }
                     }
                 }
@@ -421,6 +428,7 @@ public class Play extends Activity {
                     for (int j = 0; j < 9; j++) {
                         if (mx.get(i).get(j).isFocused()){
                             mx.get(i).get(j).setText("6");
+                            mx.get(i).get(j).setTextColor(0xff0088cc);
                         }
                     }
                 }
@@ -434,6 +442,7 @@ public class Play extends Activity {
                     for (int j = 0; j < 9; j++) {
                         if (mx.get(i).get(j).isFocused()){
                             mx.get(i).get(j).setText("8");
+                            mx.get(i).get(j).setTextColor(0xff0088cc);
                         }
                     }
                 }
@@ -447,6 +456,7 @@ public class Play extends Activity {
                     for (int j = 0; j < 9; j++) {
                         if (mx.get(i).get(j).isFocused()){
                             mx.get(i).get(j).setText("7");
+                            mx.get(i).get(j).setTextColor(0xff0088cc);
                         }
                     }
                 }
@@ -460,6 +470,7 @@ public class Play extends Activity {
                     for (int j = 0; j < 9; j++) {
                         if (mx.get(i).get(j).isFocused()){
                             mx.get(i).get(j).setText("9");
+                            mx.get(i).get(j).setTextColor(0xff0088cc);
                         }
                     }
                 }
