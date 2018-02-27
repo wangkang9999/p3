@@ -6,6 +6,7 @@ import android.app.Dialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.text.InputType;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -307,8 +308,11 @@ public class Play extends Activity {
                 }
                 t4=new Table(input);
                 if (!t4.checkfinish()) {
-                    Toast.makeText(getApplicationContext(), "你还没有完成！",
-                            Toast.LENGTH_SHORT).show();
+                    Toast toast;
+                    toast = Toast.makeText(getApplicationContext(),
+                            "你还没有完成！", Toast.LENGTH_LONG);
+                    toast.setGravity(Gravity.CENTER, 0, 0);
+                    toast.show();
                 }else if (t4.checksubmit()){
                     d1=new AlertDialog.Builder(Play.this).setTitle("Congratulations").setMessage("恭喜!你解开了本谜题.").setPositiveButton("OK",null).show();
                 }else{
